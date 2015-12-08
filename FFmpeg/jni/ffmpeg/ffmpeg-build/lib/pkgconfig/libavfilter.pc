@@ -1,0 +1,14 @@
+prefix=/home/linux/ffmpeg/jni
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 5.2.103
+Requires: libavutil >= 54.15.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -lx264 -lm -lz -pthreads
+Libs.private: 
+Cflags: -I${includedir}
